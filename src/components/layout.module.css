@@ -1,0 +1,37 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+}
+
+.heading {
+    color: rgb(78, 21, 184);
+}
+
+.site-title {
+    font-size: 3rem;
+    color: gray;
+    font-weight: 700;
+    margin: 3rem 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-link-item {
+    padding-right: 2rem;
+}
+
+.nav-link-text {
+    color: rgb(231, 40, 40);
+}
+
+nav {
+    box-shadow: 5px 4px 5px #000;
+  }

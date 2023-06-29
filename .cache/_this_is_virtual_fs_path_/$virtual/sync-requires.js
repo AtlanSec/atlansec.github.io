@@ -4,7 +4,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/home/w4z0s/Programacion/Atlansec/Blog/atlansec.github.io/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/home/w4z0s/Programacion/Atlansec/Blog/atlansec.github.io/src/pages/404.js")),
   "component---src-pages-about-js": preferDefault(require("/home/w4z0s/Programacion/Atlansec/Blog/atlansec.github.io/src/pages/about.js")),
   "component---src-pages-authors-js": preferDefault(require("/home/w4z0s/Programacion/Atlansec/Blog/atlansec.github.io/src/pages/authors.js")),

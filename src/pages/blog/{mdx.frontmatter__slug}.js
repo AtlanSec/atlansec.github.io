@@ -10,13 +10,13 @@ const BlogPost = ({ data, children }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+      <p>{data.mdx.frontmatter.date}</p>
       <GatsbyImage
       image={image}
       alt={data.mdx.frontmatter.hero_image_alt}
       style={{ maxWidth: '100%' }} // Adjust the value as needed
       quality={50} // Adjust the value as needed
       />
-      <p>{data.mdx.frontmatter.date}</p>
       {children}
     </Layout>
   )

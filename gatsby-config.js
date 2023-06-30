@@ -2,17 +2,18 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/github.atlansec.io/public",
   siteMetadata: {
-    title: `atlansec.github.io`,
+    title: `Atlansec`,
     siteUrl: `https://www.atlansec.es`,
     description: `Blog de Ciberseguridad de Atlansec`
   },
   plugins: [
+  `gatsby-plugin-react-helmet`,
   `gatsby-plugin-image`,
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`, // Needed for dynamic images
   'gatsby-plugin-react-svg',
+  'gatsby-plugin-styled-components',
   `gatsby-plugin-mdx`,
   {
     resolve: "gatsby-source-filesystem",

@@ -11,6 +11,7 @@ export default styled.header`
   padding: 1rem 0;
   transition: background 0.3s ease-in-out;
   .header__container {
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,15 +1,18 @@
 import * as React from 'react'
 import GlobalStyles from '../styles/GlobalStyles'
 import Header from './header'
+import Footer from './footer'
+import { SearchModalContextProvider } from '../contexts/searchModalContext';
 
-const Layout = ({ children }) => {
-    
+function Layout({ children }) {
     return (
-        <>
-        <GlobalStyles></GlobalStyles>
-        <Header></Header>
-        {children}</>
-    )
-}
+      <SearchModalContextProvider>
+        <GlobalStyles />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </SearchModalContextProvider>
+    );
+  }
 
 export default Layout

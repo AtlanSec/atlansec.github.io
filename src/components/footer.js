@@ -11,7 +11,7 @@ function Footer() {
         <FooterStyles>
             <div className="container">
                 <Logo/>
-                <ParagraphText className="footer__text"></ParagraphText>
+                <ParagraphText className="footer__text"> Asociacion de Ciberseguridad Atlansec</ParagraphText>
                 <ul className="footer__menuList">
                     {menu.map(item => (
                         <li key={item.path}>

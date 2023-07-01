@@ -14,6 +14,7 @@ function FeaturedBlogs() {
               date(formatString: "MMMM D, YYYY")
               title
               slug
+              author
               hero_image {
                 childImageSharp {
                   gatsbyImageData

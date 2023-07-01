@@ -7,12 +7,12 @@ export const menu = [
         title: 'Blogs',
         path: '/blog',
     },
-    {
+    /*{
         title: 'Categorias',
         path: '/categorias',
     },
     {
         title: 'Autores',
         path: '/author',
-    },  
+    },*/  
 ];

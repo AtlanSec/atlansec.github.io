@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Title } from "../typography/Title";
 import ParagraphText from "../typography/ParagraphText";
 
-function BlogItem({ title , path , categories , image , publishedAt }) {
+function BlogItem({ title , path , categories , image , publishedAt, author }) {
     return  (
     <BlogItemStyles>
         <Link to={`/blog/${path}`}>
@@ -17,6 +17,12 @@ function BlogItem({ title , path , categories , image , publishedAt }) {
         <Link to={`/blog/${path}`}>
             <Title>{title}</Title>
         </Link>
+        {publishedAt && (
+            <ParagraphText>
+                {publishedAt}
+            </ParagraphText>
+        
+        )}
         <ParagraphText className="categoriesText">
             <span key={path}>
                 {/* For making categories, see #13, last part video*/}
@@ -25,12 +31,15 @@ function BlogItem({ title , path , categories , image , publishedAt }) {
                 </Link>    
             </span>
         </ParagraphText>
-        {publishedAt && (
-            <ParagraphText>
-                {publishedAt}
-            </ParagraphText>
-        )}
         
+        <ParagraphText className="categoriesText">
+            <span key={path}>
+                {/* For making categories, see #13, last part video*/}
+                <Link to={`/authors/${author}`}>
+                {author}
+                </Link>    
+            </span>
+        </ParagraphText>
     </BlogItemStyles>
   )
 }

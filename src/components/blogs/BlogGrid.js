@@ -14,6 +14,7 @@ function BlogGrid({ blogs }) {
             categories={blog.frontmatter.categories}
             image={blog.frontmatter.hero_image}
             publishedAt={blog.frontmatter.date}
+            author={blog.frontmatter.author}
             ></BlogItem>
         ))}
     </BlogGridStyles>

@@ -15,6 +15,7 @@ module.exports = {
   'gatsby-plugin-react-svg',
   'gatsby-plugin-styled-components',
   `gatsby-plugin-mdx`,
+  `gatsby-transformer-remark`,
   {
     resolve: "gatsby-source-filesystem",
     options: {

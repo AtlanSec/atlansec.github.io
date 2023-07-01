@@ -1,23 +1,18 @@
 import { useStaticQuery, graphql } from "gatsby";
+import {getImage} from "gatsby-plugin-image";
 
 function UseImagePath(src) {
-  const data = useStaticQuery(graphql`
-    query ($src: String){
+    const data = useStaticQuery(graphql`
+    query ImageQuery($src: String) {
       file(relativePath: { eq: $src }) {
         childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `, {src});
+  `, { src });
 
-  return data.file.childImageSharp.fluid;
+  return getImage(data.file.childImageSharp);
 }
 
 export default UseImagePath;

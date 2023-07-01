@@ -4,8 +4,8 @@ import { Title } from "./typography/Title";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import ReactMarkdown from 'react-markdown';
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import Img from "gatsby-image";
 import UseImagePath from './getPath'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 function MyPortableText({ value }) {
     
@@ -18,8 +18,8 @@ function MyPortableText({ value }) {
           return <img src={src} alt={alt} />;
         } else {
             console.log(src)
-            const fluid = UseImagePath(src);
-            return <Img fluid={fluid} alt="Image here"></Img>
+            const image = UseImagePath(src);
+            return <GatsbyImage image={image} alt={alt} />;
         }
       },
     code: ({ node, inline, className, children, ...props }) => {

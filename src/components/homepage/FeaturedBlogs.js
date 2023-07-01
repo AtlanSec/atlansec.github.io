@@ -8,25 +8,25 @@ import BlogGrid from '../blogs/BlogGrid'
 function FeaturedBlogs() {
     const data  = useStaticQuery(graphql`
     {
-        allMdx(limit: 3) {
-          nodes {
-            frontmatter {
-              date(formatString: "MMMM D, YYYY")
-              title
-              slug
-              author
-              hero_image {
-                childImageSharp {
-                  gatsbyImageData
-                }
+      allMdx(limit: 3, sort: {frontmatter: {date: DESC}}) {
+        nodes {
+          frontmatter {
+            date(formatString: "MMMM D, YYYY")
+            title
+            slug
+            author
+            hero_image {
+              childImageSharp {
+                gatsbyImageData
               }
-              categories
             }
-            id
-            excerpt
+            categories
           }
+          id
+          excerpt
         }
       }
+    }
     `)
     
     const recentBlogs  = data.allMdx.nodes
